@@ -72,7 +72,6 @@ public class OSSService {
 	 *
 	 * @param file
 	 * @param mechanismDate  文件目录 mechanismDate
-	 * @return
 	 */
 	public String uploadFile(MultipartFile file, String mechanismDate){
 		String fileName = file.getOriginalFilename();  // 图片名字
@@ -109,7 +108,6 @@ public class OSSService {
 	 *
 	 * @param orgFilePathName 源文件路径和名字
 	 * @param desFilePathName 目标文件路径和名字
-	 * @return
 	 */
 	public String copyFile(String orgFilePathName, String desFilePathName) {
 		OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
@@ -121,7 +119,6 @@ public class OSSService {
 	/**
 	 * oss 下载
 	 *
-	 * @return
 	 */
 //	public String downloadFile() {
 //		OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
