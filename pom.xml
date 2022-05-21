@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.kwrobot.cloud</groupId>
+    <groupId>cloud.kwrobot</groupId>
     <artifactId>kwrobot-cloud</artifactId>
-    <version>2022.2.0</version>
+    <version>2022.3.0</version>
     <packaging>pom</packaging>
     <name>kwrobot-cloud</name>
 
@@ -36,9 +36,9 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <!--Spring -->
-        <spring-boot.version>2.6.2</spring-boot.version>
-        <spring-cloud.version>2021.0.0</spring-cloud.version>
-        <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
+        <spring-boot.version>2.6.7</spring-boot.version>
+        <spring-cloud.version>2021.0.1</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
 
 		<fastjson.version>1.2.75</fastjson.version>
         <swagger.version>2.5.0</swagger.version>
@@ -46,10 +46,16 @@
         <pagehelper.boot.version>1.4.1</pagehelper.boot.version>
         <netflix.hystrix.version>2.2.9.RELEASE</netflix.hystrix.version>
         <guava.version>31.0.1-jre</guava.version>
+        <redis.version>3.3.0</redis.version>
+        <kafka.version>2.5.0</kafka.version>
+        <elasticsearch.version>7.7.0</elasticsearch.version>
     </properties>
 
     <modules>
         <module>kwrobot-cloud-oss</module>
+        <module>plumelog-core</module>
+        <module>plumelog-logback</module>
+        <module>plumelog-trace</module>
     </modules>
 
     <distributionManagement>

@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>kwrobot-cloud</artifactId>
-        <groupId>com.kwrobot.cloud</groupId>
-        <version>2022.2.0</version>
+        <groupId>cloud.kwrobot</groupId>
+        <version>2022.3.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
