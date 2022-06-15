@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cloud.kwrobot</groupId>
     <artifactId>kwrobot-cloud</artifactId>
-    <version>2022.3.0</version>
+    <version>2022.3.1</version>
     <packaging>pom</packaging>
     <name>kwrobot-cloud</name>
 
@@ -40,11 +40,13 @@
         <spring-cloud.version>2021.0.1</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
 
-		<fastjson.version>1.2.75</fastjson.version>
+        <fastjson.version>1.2.75</fastjson.version>
+        <gson.version>2.9.0</gson.version>
         <swagger.version>2.5.0</swagger.version>
         <mybatis-plus.version>3.3.0</mybatis-plus.version>
         <pagehelper.boot.version>1.4.1</pagehelper.boot.version>
         <netflix.hystrix.version>2.2.9.RELEASE</netflix.hystrix.version>
+        <netty-all.version>4.1.63.Final</netty-all.version>
         <guava.version>31.0.1-jre</guava.version>
         <redis.version>3.3.0</redis.version>
         <kafka.version>2.5.0</kafka.version>
@@ -56,6 +58,7 @@
         <module>plumelog-core</module>
         <module>plumelog-logback</module>
         <module>plumelog-trace</module>
+        <module>xxl-job-core</module>
     </modules>
 
     <distributionManagement>
@@ -95,38 +98,15 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
-			<dependency>
-				<groupId>io.springfox</groupId>
-				<artifactId>springfox-swagger2</artifactId>
-				<version>${swagger.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>io.springfox</groupId>
-				<artifactId>springfox-swagger-ui</artifactId>
-				<version>${swagger.version}</version>
-			</dependency>
-
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.xuxueli</groupId>
-                <artifactId>xxl-job</artifactId>
-                <version>2.3.0</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
-	<dependencies>
-	<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<scope>compile</scope>
-		</dependency>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -143,28 +123,28 @@
         </plugins>
         <resources>
             <resource>
-            <directory>${basedir}/src/main/resources</directory>
-            <filtering>false</filtering>
-            <includes>
-                <include>**/*.yml</include>
-                <include>**/*.yaml</include>
-                <include>**/*.properties</include>
-                <include>**/*.p12</include>
-                <include>**/*.html</include>
-                <include>**/*.xml</include>
-            </includes>
-            <excludes>
-                <exclude>dev/*</exclude>
-                <exclude>test/*</exclude>
-                <exclude>prod/*</exclude>
-            </excludes>
-        </resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>**/*.yml</include>
+                    <include>**/*.yaml</include>
+                    <include>**/*.properties</include>
+                    <include>**/*.p12</include>
+                    <include>**/*.html</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <excludes>
+                    <exclude>dev/*</exclude>
+                    <exclude>test/*</exclude>
+                    <exclude>prod/*</exclude>
+                </excludes>
+            </resource>
 
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
                 <!--<includes>-->
-                    <!--<include>**/*.yml</include>-->
+                <!--<include>**/*.yml</include>-->
                 <!--</includes>-->
             </resource>
         </resources>
