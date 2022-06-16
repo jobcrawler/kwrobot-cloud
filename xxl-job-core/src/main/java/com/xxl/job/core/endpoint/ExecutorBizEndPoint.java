@@ -15,10 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 
 
 /**
- * executor EndPoint
- * @author HanKeQi
- * @Description
- * @date 2020/4/13 1:01 PM
+ *
  **/
 @RestController
 public class ExecutorBizEndPoint {

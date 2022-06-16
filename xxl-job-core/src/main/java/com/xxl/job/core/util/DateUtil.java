@@ -50,6 +50,8 @@ public class DateUtil {
      * format datetime. like "yyyy-MM-dd"
      *
      * @param date
+     * @return
+     * @throws ParseException
      */
     public static String formatDate(Date date) {
         return format(date, DATE_FORMAT);
@@ -59,6 +61,8 @@ public class DateUtil {
      * format date. like "yyyy-MM-dd HH:mm:ss"
      *
      * @param date
+     * @return
+     * @throws ParseException
      */
     public static String formatDateTime(Date date) {
         return format(date, DATETIME_FORMAT);
@@ -70,6 +74,7 @@ public class DateUtil {
      * @param date
      * @param patten
      * @return
+     * @throws ParseException
      */
     public static String format(Date date, String patten) {
         return getDateFormat(patten).format(date);
@@ -79,6 +84,8 @@ public class DateUtil {
      * parse date string, like "yyyy-MM-dd HH:mm:s"
      *
      * @param dateString
+     * @return
+     * @throws ParseException
      */
     public static Date parseDate(String dateString){
         return parse(dateString, DATE_FORMAT);
@@ -88,6 +95,8 @@ public class DateUtil {
      * parse datetime string, like "yyyy-MM-dd HH:mm:ss"
      *
      * @param dateString
+     * @return
+     * @throws ParseException
      */
     public static Date parseDateTime(String dateString) {
         return parse(dateString, DATETIME_FORMAT);
@@ -98,6 +107,8 @@ public class DateUtil {
      *
      * @param dateString
      * @param pattern
+     * @return
+     * @throws ParseException
      */
     public static Date parse(String dateString, String pattern) {
         try {

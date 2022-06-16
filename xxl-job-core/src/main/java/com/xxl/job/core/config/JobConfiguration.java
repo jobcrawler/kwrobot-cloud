@@ -14,10 +14,8 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author HanKeQi
- * @Description
- * @date 2020/4/13 1:01 PM
- **/
+ *
+ */
 @ComponentScan("com.xxl.job.core.endpoint")
 public class JobConfiguration implements InitializingBean {
 

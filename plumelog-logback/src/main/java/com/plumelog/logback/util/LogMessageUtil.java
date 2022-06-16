@@ -49,9 +49,6 @@ public class LogMessageUtil {
     /**
      * 扩展字段
      *
-     * @param baseLogMessage
-     * @param iLoggingEvent
-     * @return
      */
     @SuppressWarnings("unchecked")
     public static String getLogMessage(BaseLogMessage baseLogMessage, final ILoggingEvent iLoggingEvent) {

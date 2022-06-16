@@ -13,9 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author HanKeQi
- * @Date 2020/4/15 11:58 上午
- * @Version 1.0
+ *
  **/
 public class RestTemplateClient<T> {
 
@@ -60,6 +58,7 @@ public class RestTemplateClient<T> {
     /**
      * 必须使用
      * sel com.xxl.job.core.config.JobConfiguration
+     * @return
      */
     private static RestTemplate getRestTemplateNacosJob(){
         RestTemplate restTemplate = (RestTemplate)ApplicationContextHolder.getBean("restTemplateNacosJob");

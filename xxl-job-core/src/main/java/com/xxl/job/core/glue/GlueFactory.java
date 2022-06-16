@@ -40,7 +40,6 @@ public class GlueFactory {
 	 * load new instance, prototype
 	 *
 	 * @param codeSource
-	 * @return
 	 * @throws Exception
 	 */
 	public IJobHandler loadNewInstance(String codeSource) throws Exception{

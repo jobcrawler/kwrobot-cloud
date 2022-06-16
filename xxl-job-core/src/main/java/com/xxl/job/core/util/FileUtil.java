@@ -21,6 +21,7 @@ public class FileUtil {
      * delete recursively
      *
      * @param root
+     * @return
      */
     public static boolean deleteRecursively(File root) {
         if (root != null && root.exists()) {
