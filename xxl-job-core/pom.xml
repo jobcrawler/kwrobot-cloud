@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>kwrobot-cloud</artifactId>
 		<groupId>cloud.kwrobot</groupId>
-		<version>2022.4.1</version>
+		<version>2022.6.0</version>
 	</parent>
 	<artifactId>xxl-job-core</artifactId>
 	<packaging>jar</packaging>
@@ -19,12 +19,11 @@
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
-			<version>${netty-all.version}</version>
+			<version>4.1.63.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
-			<version>${gson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.groovy</groupId>
@@ -64,30 +63,10 @@
 	</dependencies>
 	<build>
 		<plugins>
-			<!-- 依赖包插件 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${project.build.directory}/lib</outputDirectory>
-							<!-- 是否不包含间接依赖 -->
-							<excludeTransitive>false</excludeTransitive>
-							<!-- 忽略版本 -->
-							<stripVersion>false</stripVersion>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.1</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
