@@ -58,7 +58,6 @@
         <module>plumelog-core</module>
         <module>plumelog-logback</module>
         <module>plumelog-trace</module>
-        <module>xxl-job-core</module>
     </modules>
 
     <distributionManagement>
